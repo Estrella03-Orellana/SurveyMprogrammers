@@ -8,8 +8,8 @@
     Title="SurveyMprogrammers">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="SurveyView"
+        ContentTemplate="{DataTemplate local:SurveysView}"
+        Route="SurveysView" />
 
 </Shell>
