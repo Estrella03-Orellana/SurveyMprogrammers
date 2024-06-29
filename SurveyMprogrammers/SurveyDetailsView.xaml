@@ -4,9 +4,27 @@
              x:Class="SurveyMprogrammers.SurveyDetailsView"
              Title="SurveyDetailsView">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Nombre"></Label>
+                <Entry x:Name="NameEntry"></Entry>
+                <Label Text="Fecha de Nacimiento"></Label>
+                <DatePicker x:Name="BirthdatePicker"></DatePicker>
+                <Label Text="Equipo Favorito"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="FavoriteTeamLabel"></Label>
+                    <Button  Grid.Column="1" Text="..." Clicked="FavoriteTeam_Clicked"></Button>
+                </Grid>
+            </StackLayout>
+            <Button Text="Aceptar" Grid.Row="1" Clicked="Ok_Clicked"></Button>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
